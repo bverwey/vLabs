@@ -8,13 +8,13 @@ module sr_ff(
 reg q,qi;
   always @(posedge clk)
     begin
-      q<=qi;
+      q<=0;
       if(s==2'b00 && r==2'b00)
         qi<=q;
       if(s==2'b00 && r==2'b01)
         qi<=1'b0;
       if(s==2'b01 && r==2'b00)
-        qi<=1'b1; 
+        qi<=1'b1;
       if(s==2'b01 && r==2'b01)
         qi<=1'b0;
     end
@@ -25,7 +25,5 @@ module sr_ff_top(
   output q,
   output qi
 );
-  sr_ff uuf(1,0, clk, q, qi);
+  sr_ff uuf(0,0, clk, q, qi);
 endmodule
-
-  
