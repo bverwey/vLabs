@@ -1,4 +1,4 @@
-module sr_ff(
+module wksg(
   input [1:0]x,
   input [1:0]y,
   input clk,
@@ -26,12 +26,12 @@ reg sx,sy;
     end
 endmodule
 
-module sr_ff_top(
+module wksg_top(
   input clk,
   input x,
   input y,
   output sx,
   output sy
 );
-  sr_ff uuf(1,1, clk, sx, sy);
+  wksg uuf(1,1, clk, sx, sy);
 endmodule
