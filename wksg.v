@@ -33,5 +33,5 @@ module wksg_top(
   output sx,
   output sy
 );
-  wksg uuf(1,1, clk, sx, sy);
+  wksg uuf(0, 0, clk, sx, sy);
 endmodule
